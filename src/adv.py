@@ -1,6 +1,9 @@
 from room import Room
 
+user = int(input("You stand before the GATE. In which DIRECTION do you wish to go? [N]orth, [S]outh, [E]ast, or [W]est:\n "))
+
 # Declare all the rooms
+
 
 room = {
     'outside':  Room("Outside Cave Entrance",
