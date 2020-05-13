@@ -1,6 +1,12 @@
 from room import Room
+from player import Player
+
+
+user = int(input("You stand before the GATE. In which DIRECTION do you wish to go? [N]orth, [S]outh, [E]ast, or [W]est:\n "))
+
 
 # Declare all the rooms
+
 
 room = {
     'outside':  Room("Outside Cave Entrance",
@@ -32,7 +38,7 @@ room['overlook'].s_to = room['foyer']
 room['narrow'].w_to = room['foyer']
 room['narrow'].n_to = room['treasure']
 room['treasure'].s_to = room['narrow']
-
+print(room['outside'].n_to.name)
 #
 # Main
 #
@@ -46,6 +52,16 @@ room['treasure'].s_to = room['narrow']
 # * Waits for user input and decides what to do.
 #
 # If the user enters a cardinal direction, attempt to move to the room there.
+
+# while alwaysrunning:
+#     # waits for user input
+#         # check if room exists in that direction
+#         if input == "N":
+#             if room.n_to exists
+#                 move there
+#                 player.room = (room.n_to)
+#             else print error msg
+
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
